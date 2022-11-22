@@ -10,10 +10,12 @@
 
 ?>
 
-
-	<footer >
-	</footer><!-- #colophon -->
-
+	
+		<footer >
+			<p>Footer</p>
+		</footer><!-- #colophon -->
+	</div>
+</div>
 <?php wp_footer(); ?>
 
 </body>

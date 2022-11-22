@@ -8,6 +8,8 @@
 ?>
 
 <?php get_header(); ?>
-<div class="content">content</div>
+<div class="content">
+	Content
+</div>
 
 <?php get_footer();?>
