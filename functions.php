@@ -8,6 +8,13 @@
 ?>
 
 <?php
+
+if(!defined('FRX_DIR_PATH')){
+	define('FRX_DIR_PATH', untrailingslashit(get_template_directory()));
+}
+
+require_once FRX_DIR_PATH. '/inc/helpers/autoloader.php';
+
 function frx_enqueue_scripts(){
 
 	// Register styles.
