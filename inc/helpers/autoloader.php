@@ -1,40 +1,49 @@
-<?php/**
- * Autoloader:file for plugin
- * 
+<?php
+/**
+ * Autoloader file for theme.
+ *
  * @package frx
  */
 
 namespace FRX_THEME\Inc\Helpers;
 
-function autoloader($resource = ''){
-    $resource_path=false;
-    $namespace_root = 'FRX_THEME\\';
-    $resource = trim($resource,'\\');
+/**
+ * Auto loader function.
+ *
+ * @param string $resource Source namespace.
+ *
+ * @return void
+ */
+function autoloader( $resource = '' ) {
+	$resource_path  = false;
+	$namespace_root = 'FRX_THEME\\';
+	$resource       = trim( $resource, '\\' );
 
-    if(empty($resource) || strpos($resource,'\\')===false || strpos($resource, $namespace_root) !==0){
-        //Not our namespace, bail out
-        return;
-    }
-    //remove our root namespace
-    $resource - str_replace($namespace_root, '', $resource);
+	if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
+		// Not our namespace, bail out.
+		return;
+	}
 
-    $path = explode(
-        '\\',
-        str_replace('_','-', strtolower($resource))
-    );
+	// Remove our root namespace.
+	$resource = str_replace( $namespace_root, '', $resource );
 
-    /**
-     * time to determine which type of rsource path it is so that we can deduce the correct file path for it
-     */
+	$path = explode(
+		'\\',
+		str_replace( '_', '-', strtolower( $resource ) )
+	);
 
-     if(empty($path[0]) || empty($path[1])){
-        return;
-     }
+	/**
+	 * Time to determine which type of resource path it is,
+	 * so that we can deduce the correct file path for it.
+	 */
+	if ( empty( $path[0] ) || empty( $path[1] ) ) {
+		return;
+	}
 
-     $directory = '';
-     $file_name = '';
+	$directory = '';
+	$file_name = '';
 
-     if ( 'inc' === $path[0] ) {
+	if ( 'inc' === $path[0] ) {
 
 		switch ( $path[1] ) {
 			case 'traits':
