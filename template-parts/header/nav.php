@@ -13,14 +13,11 @@ $header_menus= wp_get_nav_menu_items($header_menu_id);
 ?>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
 <div class="container">	
-	<a class="navbar-brand" href="#">
-		<?php 
-			if(function_exists('the_custom_logo')){
-				the_custom_logo();
-			}
-		?>
+	
+	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
+		
 		<?php
 			$site_title = get_bloginfo( 'name' );
 			echo $site_title;
@@ -35,7 +32,7 @@ $header_menus= wp_get_nav_menu_items($header_menu_id);
 		<?php
 		
 		if(!empty($header_menus) && is_array($header_menus)){ ?>
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav nav-fill mx-auto w-100">
 			<?php
 				foreach($header_menus as $menu_item){
 					if(!$menu_item->menu_item_parent){
@@ -72,13 +69,16 @@ $header_menus= wp_get_nav_menu_items($header_menu_id);
 					}
 				}
 			?>
+			<li class="nav-item ">
+							<a class="nav-link" href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" alt="<?php esc_attr_e( 'Sign In', 'frx' ); ?>">
+						<?php _e( 'Sign In', 'frx' ); ?>
+						</a>
+						</li>
 			</ul>
+	
 		<?php } ?>	
-			
-		<form class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-		</form>
+		
+		
 	</div>
 	</div>
 </nav>

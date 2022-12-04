@@ -66,6 +66,17 @@ h1,h2{
 
 
 /**
+*Header
+*
+**/
+nav {
+    background-color: var(--primary-dark);
+    font-family:var(--accent-font);
+}
+
+
+
+/**
 *Footer
 *
 **/
