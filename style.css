@@ -13,3 +13,63 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: frx
 
 */
+
+/**
+*Variables
+*
+**/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --primary-dark: #4F2683;
+    --accent-font: 'Quicksand', sans-serif;;
+    --main-font:'Lato', sans-serif;;
+  }
+
+
+/**
+*All Pages
+*
+**/
+
+body{
+    font-family:var(--main-font);
+  }
+
+  
+
+h1,h2{
+    font-family:var(--accent-font);
+    color:var(--primary-dark);
+}
+
+/**
+*Home Page
+*
+**/
+
+.home-pre-title{
+    font-size:small;
+    display:block;
+}
+
+.home-box{
+    border:1px solid var(--primary-dark);
+    padding:30px;
+}
+
+.home-full-column{
+
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+/**
+*Footer
+*
+**/
+
+footer{
+    background-color:var(--primary-dark);
+}
