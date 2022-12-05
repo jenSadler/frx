@@ -37,12 +37,14 @@ add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 
 function filter_projects() {
 	$catSlug = $_POST['category'];
+	$search =  $_POST['keyword'];
 
   
 	$ajaxposts = new WP_Query([
 	  'post_type' => 'post',
 	  'posts_per_page' => -1,
 	  'category_name' => $catSlug,
+	  's' => $search,
 	  'orderby' => 'menu_order', 
 	  'order' => 'desc',
 	]);
@@ -53,7 +55,7 @@ function filter_projects() {
 		$response .= get_template_part('template-parts/content');
 	  endwhile;
 	} else {
-	  $response = 'empty';
+		$response .= get_template_part('template-parts/content-none');
 	}
   
 	echo $response;

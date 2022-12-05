@@ -30,7 +30,9 @@ $catargs = array(
 <div class="page-list-hold-filter px-4 py-4">
 <?php get_search_form();?>
 </div>
+<!--
 <h2>Tags</h2>
+
 <div class="page-list-hold-filter px-4 py-4">
 	<ul class="tag-list comma-list">
 	<?php
@@ -41,9 +43,12 @@ $catargs = array(
 	<?php endif; ?>
 	
 	</ul>
-</div>
+</div> -->
 <h2>Filter</h2>
 <div class="page-list-hold-filter px-4 py-4">
+	<h3 class="cat-title"> All Projects </h3>
+	<?php $page_for_posts = get_option( 'page_for_posts' );?>
+	<ul><li><a href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>"><?php echo (get_the_title( get_option('page_for_posts', true) ));?></a></li></ul>
 <?php wp_list_categories($catargs); ?>
 </div>
 <?php
