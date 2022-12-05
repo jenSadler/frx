@@ -22,6 +22,7 @@ Text Domain: frx
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 :root {
     --primary-dark: #4F2683;
+    --light-bg: #FAFAFA;
     --accent-font: 'Quicksand', sans-serif;;
     --main-font:'Lato', sans-serif;;
   }
@@ -62,7 +63,11 @@ h1,h2{
     color:var(--primary-dark);
 }
 
-a{
+body a{
+    color:var(--primary-dark);
+}
+
+body a:hover{
     color:var(--primary-dark);
 }
 
@@ -146,6 +151,27 @@ a.post-list-selected-tag{
 
 }
 
+.btn.tag-list-button{
+    border-radius:25px;
+    background-color:transparent;
+    border:1px solid transparent;
+    color:var(--primary-dark);
+    margin:0;
+
+}
+.tag-list {
+    margin:0;
+    padding:0;
+}
+.tag-list li{
+    list-style-type:none;
+    display:inline-block;
+    margin:0;
+}
+
+.tag-list-item-active{
+    border:1px solid var(--primary-dark);
+}
 .btn.disabled.tag-button{
     border-radius:25px;
     background-color:transparent;
@@ -157,4 +183,19 @@ a.post-list-selected-tag{
     background-color:var(--primary-dark);
     border:1px solid var(--primary-dark);
     color:white;
+}
+
+h3.cat-title{
+    font-size:large;
+    font-family:var(--main-font);
+    font-weight:bold;
+    width:100%;
+    display:block;
+    border-bottom:2px solid black;
+    color:black;
+
+}
+
+.page-list-hold-filter{
+    background-color: var(--light-bg);
 }
