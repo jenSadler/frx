@@ -22,7 +22,7 @@
   </div>
   <!-- Copyright -->
 </footer><!-- #colophon -->
-	</div>
+	
 </div>
 <?php wp_footer(); ?>
 
