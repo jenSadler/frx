@@ -2,6 +2,12 @@ console.warn("hello people!");
 
 jQuery(document).ready(function($){
 
+ajaxCall(); 
+
+$('#additive').on('change', function() {
+    ajaxCall();
+});
+
 $('.cat-list_item').on('change', function() {
         if ($(this).prop("checked")) {
             $(this).addClass('active');
@@ -21,13 +27,23 @@ $('#keyword').on('keyup', function(){
 });
 
 function getCategoryKeywords(){
+
+    var divider = "+";
+    if ($("#additive").prop("checked")) {
+        divider=","  
+    }
+    else{
+        divider="+" 
+    }
+    
+
     var output = "";
     $('.cat-list_item.active').each(function(i, obj) {
         if(i==0){
             output = $(this).val();  
         }
         else{
-            output = output + "+"+ $(this).val();
+            output = output + divider + $(this).val();
         }
         
         console.log(output);

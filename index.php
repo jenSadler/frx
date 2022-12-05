@@ -27,7 +27,9 @@
 				</div>
 				<div class="col-sm-12 col-md-8 col-lg-9">
   				
-				<h1><?php single_post_title();?></h1>
+				
+				<h1>Resources</h1>
+				
 			<?php
 			if($projects->have_posts()):
 				?>

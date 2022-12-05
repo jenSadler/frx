@@ -26,6 +26,13 @@ $catargs = array(
 
 
 ?>
+
+<!-- Default checked -->
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="additive" checked>
+  <label class="custom-control-label" for="additive">Addtive</label>
+</div>
+
 <h2>Search</h2>
 <div class="page-list-hold-filter px-4 py-4">
 <?php get_search_form();?>
