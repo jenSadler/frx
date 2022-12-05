@@ -295,7 +295,7 @@ $sep  = "";
       echo $parents;
 
       // Current page
-      echo '<li class="item-current item"><span><a href="#">'. get_the_title() .'</a></span></li>';
+      echo '<li class="item-current item"><span><a href="#">'. single_post_title('', FALSE)  .'</a></span></li>';
 
     } else {
 
@@ -316,7 +316,25 @@ $sep  = "";
 
   }
 	else if ( is_home() ) {
-	
+		// If child page, get parents
+		$page_for_posts = get_option( 'page_for_posts' );
+		// If child page, get parents
+		$anc = get_post_ancestors( $page_for_posts );
+
+		// Get parents in the right order
+		$anc = array_reverse( $anc );
+  
+		// Parent page loop
+		if ( !isset( $parents ) ) $parents = null;
+		foreach ( $anc as $ancestor ) {
+  
+		  $parents .= '<li class="item-parent item"><a href="'. get_permalink( $ancestor ) .'">'. get_the_title( $ancestor ) .'</a></li>' . $sep;
+  
+		}
+  
+		// Display parent pages
+		echo $parents;
+		
 		 echo '<li class="item-current item"><span><a href="#" class="disabled">'. single_post_title('', FALSE) .'</a></span></li>';
 	}
 
