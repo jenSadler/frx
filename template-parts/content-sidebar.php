@@ -67,8 +67,10 @@ function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_
 		$output .= "<h3 class=\"cat-title\">".$item->name."</h3>";
 	}
 	else{
-		$output .= "<li class=\"item\"><a class=\"cat-list_item\" href=\"#!\" data-slug=\"".$item->slug . "\">".$item->name."</a>";
-	}
+		$output .= "<li class=\"item\">";
+		$output .= "<input type=\"checkbox\" id=\"".$item->slug ."\" name=\"cat-value\" value=\"".$item->slug ."\" class=\"cat-list_item\">";
+		$output .= "<label for=\"vehicle1\"> ".$item->name."</label>";
+	}	$output .= "</li>";
 }  
 
 function end_el(&$output, $item, $depth=0, $args=array()) {  

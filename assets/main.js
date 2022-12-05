@@ -2,10 +2,15 @@ console.warn("hello people!");
 
 jQuery(document).ready(function($){
 
-$('.cat-list_item').on('click', function() {
-    $('.cat-list_item').removeClass('active');
-    $(this).addClass('active');
-    console.log("inside"+$(this).data('slug'));
+$('.cat-list_item').on('change', function() {
+        if ($(this).prop("checked")) {
+            $(this).addClass('active');
+            
+        }
+        else{
+            $(this).removeClass('active')
+        }
+    console.log("inside"+$(this).val());
    
     ajaxCall();   
 });
@@ -15,11 +20,26 @@ $('#keyword').on('keyup', function(){
     ajaxCall();
 });
 
+function getCategoryKeywords(){
+    var output = "";
+    $('.cat-list_item.active').each(function(i, obj) {
+        if(i==0){
+            output = $(this).val();  
+        }
+        else{
+            output = output + "+"+ $(this).val();
+        }
+        
+        console.log(output);
+    });
+    
+     return output;
+}
+
 
 function ajaxCall(){
     var keyword = $('#keyword').val();
-    var category = $('.cat-list_item.active').data('slug');
-    
+    var category = getCategoryKeywords();
     console.log("keyword:"+ keyword+ " category:"+category);
 
 
