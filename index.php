@@ -18,7 +18,7 @@
 
 <?php get_header(); ?>
 <div id="primary">
-		<main id="main" class="site-main mt-5" role="main">
+		<main id="main" class="site-main mt-1" role="main">
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-3"> 
@@ -26,6 +26,8 @@
 				
 				</div>
 				<div class="col-sm-12 col-md-9">
+  				
+				<h1><?php single_post_title();?></h1>
 			<?php
 			if($projects->have_posts()):
 				?>

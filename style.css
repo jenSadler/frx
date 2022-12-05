@@ -199,3 +199,96 @@ h3.cat-title{
 .page-list-hold-filter{
     background-color: var(--light-bg);
 }
+
+button.btn.page-list-search-button{
+    background-color:transparent;
+    border:1px solid var(--primary-dark);
+    color:var(--primary-dark);
+}
+
+
+/*Breadcrumbs*/
+
+div.holdBreadcrumbs{
+    position:relative;
+
+	border-bottom:none;
+	
+	overflow:hidden;
+    width:100%;
+	display:flex;
+	flex-wrap: wrap;
+	gap:10px 0;
+    
+  
+}
+div.holdBreadcrumbs ul{
+	padding:0 ;
+	text-align:right;
+	display: flex;
+	justify-content:flex-end;
+	transform: skew(-15deg);
+	align-items: right;
+	flex-grow:1;
+    margin-bottom:0.25rem;
+		
+}
+
+div.holdBreadcrumbs ul li:first-child{
+	border-left:none;
+}
+
+div.holdBreadcrumbs ul li:first-child:hover{
+	border-left:none;
+}
+	
+
+div.holdBreadcrumbs ul li:last-child{
+	background-color: transparent;
+}
+
+div.holdBreadcrumbs ul li:last-child:hover{
+	background-color: transparent;
+}
+
+div.holdBreadcrumbs ul li{
+	list-style-type:none;
+
+	padding:0px 10px;
+	background-color: transparent;
+	padding: 0 5px;
+	border-left: 1px solid var(--primary-dark);
+	display: block;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	align-self:stretch;
+	
+	justify-content: center;
+}
+	
+div.holdBreadcrumbs ul li a, div.holdBreadcrumbs ul li span{
+	padding: 0 5px;
+	display:block;
+	transform: skew(15deg);
+	border:0px;
+	line-height:1;
+
+	font-weight:300;
+	text-align:center;
+	font-size: var(--smallText);
+	
+}
+
+div.holdBreadcrumbs ul li span{
+
+	background-color: transparent;
+}
+
+div.holdBreadcrumbs ul li span a {
+	transform: skew(-15deg);
+}
+
+div.holdBreadcrumbs ul li:hover a{
+	text-decoration:underline;
+}

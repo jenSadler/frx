@@ -12,7 +12,7 @@ $catargs = array(
 		'taxonomy' => 'category',
 		'orderby' => 'term_order',
 		'order'=>'ASC',
-        'hide_empty'    => '0',
+        'hide_empty'    => '1',
 		'hierarchical' =>'1',
 		'walker'=> new Walker_Simple_Example,
 		'title_li'           => __( '' ),
@@ -26,6 +26,10 @@ $catargs = array(
 
 
 ?>
+<h2>Search</h2>
+<div class="page-list-hold-filter px-4 py-4">
+<?php get_search_form();?>
+</div>
 <h2>Tags</h2>
 <div class="page-list-hold-filter px-4 py-4">
 	<ul class="tag-list comma-list">
