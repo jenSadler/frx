@@ -71,6 +71,38 @@ body a:hover{
     color:var(--primary-dark);
 }
 
+body .btn-primary{
+    background-color:var(--primary-dark);
+    color:white;
+    border:1px solid var(--primary-dark);
+}
+body .btn-primary:hover{
+    color:var(--primary-dark);
+    background-color:white;
+    border:1px solid var(--primary-dark);
+}
+
+body .btn-outline-primary:hover {
+    color: #fff;
+    background-color:var(--primary-dark);
+    border-color:var(--primary-dark);
+  }
+body .btn-outline-primary {
+    color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+
+body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-outline-primary,body .btn-outline-primary.active, body .btn-outline-primary.dropdown-toggle.show, body .btn-outline-primary:active {
+    color: #fff;
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+
+ body .form-check-input:checked {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+
 /**
 *Home Page
 *
@@ -151,27 +183,12 @@ a.post-list-selected-tag{
 
 }
 
-.btn.tag-list-button{
-    border-radius:25px;
-    background-color:transparent;
-    border:1px solid transparent;
-    color:var(--primary-dark);
-    margin:0;
-
-}
-.tag-list {
-    margin:0;
-    padding:0;
-}
 .tag-list li{
     list-style-type:none;
     display:inline-block;
-    margin:0;
+
 }
 
-.tag-list-item-active{
-    border:1px solid var(--primary-dark);
-}
 .btn.disabled.tag-button{
     border-radius:25px;
     background-color:transparent;
@@ -205,6 +222,25 @@ button.btn.page-list-search-button{
     border:1px solid var(--primary-dark);
     color:var(--primary-dark);
 }
+
+
+ul.cat-list li{
+    list-style-type:none;
+   
+}
+li.item label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    vertical-align: top;
+    color:var(--primary-dark);
+  }
+
+.custom-control-input:checked ~
+.custom-control-label::before {
+    border-color:var(--primary-dark) !important;
+    background-color: var(--primary-dark) !important;
+}
+
 
 
 /*Breadcrumbs*/

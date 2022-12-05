@@ -1,14 +1,17 @@
 console.warn("hello people!");
 
 jQuery(document).ready(function($){
-
+    console.warn(jQuery.fn.jquery);
 ajaxCall(); 
 
-$('#additive').on('change', function() {
+$('#cat-additive').on('change', function() {
+    ajaxCall();
+});
+$('#tag-additive').on('change', function() {
     ajaxCall();
 });
 
-$('.cat-list_item').on('change', function() {
+$('.cat-list-item').on('change', function() {
         if ($(this).prop("checked")) {
             $(this).addClass('active');
             
@@ -21,6 +24,19 @@ $('.cat-list_item').on('change', function() {
     ajaxCall();   
 });
 
+$('.tag-list-item').on('change', function() {
+    if ($(this).prop("checked")) {
+        $(this).addClass('active');
+        
+    }
+    else{
+        $(this).removeClass('active')
+    }
+console.log("inside"+$(this).val());
+
+ajaxCall();   
+});
+
 $('#keyword').on('keyup', function(){
     
     ajaxCall();
@@ -29,7 +45,7 @@ $('#keyword').on('keyup', function(){
 function getCategoryKeywords(){
 
     var divider = "+";
-    if ($("#additive").prop("checked")) {
+    if ($("#cat-additive").prop("checked")) {
         divider=","  
     }
     else{
@@ -38,7 +54,33 @@ function getCategoryKeywords(){
     
 
     var output = "";
-    $('.cat-list_item.active').each(function(i, obj) {
+    $('.cat-list-item.active').each(function(i, obj) {
+        if(i==0){
+            output = $(this).val();  
+        }
+        else{
+            output = output + divider + $(this).val();
+        }
+        
+        console.log(output);
+    });
+    
+     return output;
+}
+
+function getTagKeywords(){
+
+    var divider = "+";
+    if ($("#tag-additive").prop("checked")) {
+        divider=","  
+    }
+    else{
+        divider="+" 
+    }
+    
+
+    var output = "";
+    $('.tag-list-item.active').each(function(i, obj) {
         if(i==0){
             output = $(this).val();  
         }
@@ -56,7 +98,8 @@ function getCategoryKeywords(){
 function ajaxCall(){
     var keyword = $('#keyword').val();
     var category = getCategoryKeywords();
-    console.log("keyword:"+ keyword+ " category:"+category);
+    var tag = getTagKeywords();
+    console.log("keyword:"+ keyword+ " category:"+category+" tag:"+tag);
 
 
     $.ajax({
@@ -66,7 +109,8 @@ function ajaxCall(){
       data: {
         action: 'filter_projects',
         category: category,
-        keyword: keyword 
+        keyword: keyword,
+        tag: tag
        
       },
       success: function(res) {

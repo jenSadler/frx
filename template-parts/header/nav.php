@@ -41,7 +41,7 @@ $header_menus= wp_get_nav_menu_items($header_menu_id);
 
 						if(! $has_children){ ?>
 						<li class="nav-item ">
-							<a class="nav-link" href="<?php echo esc_url($menu_item->url);?>"><?php echo esc_html($menu_item->title);?><span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="<?php echo esc_url($menu_item->url);?>"><?php echo esc_html($menu_item->title);?></a>
 						</li>
 						<?php
 						}

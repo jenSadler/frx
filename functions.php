@@ -38,15 +38,16 @@ add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 function filter_projects() {
 	$catSlug = $_POST['category'];
 	$search =  $_POST['keyword'];
+	$tagSlug =  $_POST['tag'];
 
   
 	$ajaxposts = new WP_Query([
 	  'post_type' => 'post',
 	  'posts_per_page' => -1,
 	  'category_name' => $catSlug,
+	  'tag' => $tagSlug,
 	  's' => $search,
-	  'orderby' => 'menu_order', 
-	  'order' => 'desc',
+	  
 	]);
 	$response = '';
   

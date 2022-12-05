@@ -21,11 +21,11 @@
 		<main id="main" class="site-main mt-1" role="main">
 			<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-md-4 col-lg-3"> 
+				<div class="col-sm-12 col-md-5 col-lg-4"> 
 				<?php get_template_part('template-parts/content-sidebar'); ?>
 				
 				</div>
-				<div class="col-sm-12 col-md-8 col-lg-9">
+				<div class="col-sm-12 col-md-7 col-lg-8">
   				
 				
 				<h1>Resources</h1>
