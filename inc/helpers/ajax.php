@@ -5,7 +5,7 @@
  * 
  * @package frx
  */
-
+/*
 namespace FRX_THEME\Inc\Helpers;
 
 function filter_projects() {
@@ -31,4 +31,4 @@ function filter_projects() {
   
 	echo $response;
 	exit;
-  } ?>
+  } ?>*/

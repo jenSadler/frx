@@ -6,6 +6,7 @@
  * @package frx
  */
 
+ /*
 namespace FRX_THEME\Inc\Helpers;
 
 
@@ -270,4 +271,4 @@ $sep  = "";
   // End breadcrumb
   echo '</ul>';
 
-}?>
+}?>*/

@@ -49,7 +49,19 @@ if(has_category()) {
  
 
    <div class="card h-100">
-   <a href="<?php the_permalink();?>"> <?php the_post_thumbnail('post-thumbnail', ['class' => 'card-img-top', 'title' => 'Feature image']); ?></a>
+   <a href="<?php the_permalink();?>"> 
+    <?php 
+        if(has_post_thumbnail()){
+            the_post_thumbnail('thumbnail', ['class' => 'card-img-top', 'alt' => 'Feature image']); 
+        }
+       /* else{
+            $attachmentID = 121;
+        $img= wp_get_attachment_image_src($attachmentID, 'medium');
+        $alt = get_post_meta($attachmentID, '_wp_attachment_image_alt', true);    
+            echo "<img src='".$img[0]."' alt='" .$alt."' class='wp-post-image card-img-top'/>";
+        };*/
+        ?>
+    </a>
         
         <div class="card-body">
                 <a href="<?php the_permalink();?>"><h5 class="card-title"><?php the_title();?></h5></a>

@@ -29,6 +29,8 @@ function frx_get_theme_instance(){
 }
 
 frx_get_theme_instance();
+
+
 add_action('wp_ajax_filter_projects', 'filter_projects');
 add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 
@@ -36,11 +38,13 @@ add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 
 
 function filter_projects() {
+  echo "HI!";
 	$catSlug = $_POST['category'];
 	$search =  $_POST['keyword'];
 	$tagSlug =  $_POST['tag'];
 
   
+
 	$ajaxposts = new WP_Query([
 	  'post_type' => 'post',
 	  'posts_per_page' => -1,
@@ -49,6 +53,7 @@ function filter_projects() {
 	  's' => $search,
 	  
 	]);
+
 	$response = '';
   
 	if($ajaxposts->have_posts()) {

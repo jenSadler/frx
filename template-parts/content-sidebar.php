@@ -89,7 +89,7 @@ $catargs = array(
 	if ( $tags ) :
 		foreach ( $tags as $tag ) : ?>
 
-			<li class="item my-2 mx-1 px-1 py-1">
+			<li class="item my-0 mx-0 px-0 py-0">
 			<input type="checkbox" class="btn-check tag-list-item" name="tag-value" id="<?php echo $tag->slug ?>" value="<?php echo $tag->slug ?>" autocomplete="off">
 			<label class="btn btn-outline-primary" for="<?php echo $tag->slug ?>"><?php echo $tag->name ?></label>
 			</li>

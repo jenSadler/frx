@@ -5,7 +5,7 @@
  * 
  * @package frx
  */
-
+/*
 namespace FRX_THEME\Inc\Helpers;
 
 function get_the_tag_list_as_pills($post_id){
@@ -21,5 +21,5 @@ function get_the_tag_list_as_pills($post_id){
     return $tag_html;
 }
 
-
+*/
 ?>

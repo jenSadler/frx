@@ -103,6 +103,10 @@ body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-out
     border-color: var(--primary-dark);
   }
 
+  body .card-img-top {
+    object-fit:cover;
+  }
+
 /**
 *Home Page
 *

@@ -2,7 +2,6 @@ console.warn("hello people!");
 
 jQuery(document).ready(function($){
     console.warn(jQuery.fn.jquery);
-ajaxCall(); 
 
 $('#cat-additive').on('change', function() {
     ajaxCall();
