@@ -1,8 +1,14 @@
-console.warn("hello people!");
+
 
 jQuery(document).ready(function($){
     console.warn(jQuery.fn.jquery);
 
+    var searchContents = $('#keyword').val();
+    if(typeof searchContents !== "undefined" && searchContents !=""){
+        ajaxCall();
+    }
+    
+     
 $('#cat-additive').on('change', function() {
     ajaxCall();
 });
@@ -36,7 +42,7 @@ console.log("inside"+$(this).val());
 ajaxCall();   
 });
 
-$('#keyword').on('keyup', function(){
+$('.page-list-search-button').on('click', function(){
     
     ajaxCall();
 });
@@ -95,7 +101,7 @@ function getTagKeywords(){
 
 
 function ajaxCall(){
-    var keyword = $('#keyword').val();
+    var search = $('#keyword').val();
     var category = getCategoryKeywords();
     var tag = getTagKeywords();
     console.log("keyword:"+ keyword+ " category:"+category+" tag:"+tag);
@@ -108,7 +114,7 @@ function ajaxCall(){
       data: {
         action: 'filter_projects',
         category: category,
-        keyword: keyword,
+        s: search,
         tag: tag
        
       },

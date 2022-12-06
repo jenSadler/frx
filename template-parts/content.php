@@ -16,7 +16,7 @@ foreach ( $tags as $tag ) {
 	/*$tag_html .= "<p class='{$tag->slug} btn btn-primary button-sm mx-1 my-1 tag-button disabled'>";
 	$tag_html .= "{$tag->name}</p>";*/
 
-        $tag_html .= "<p title='{$tag->name}'class='{$tag->slug} btn btn-primary button-sm mx-1 my-1 tag-button disabled'>";
+        $tag_html .= "<p title='{$tag->name}'class='{$tag->slug} btn btn-primary button-sm mx-1 my-1 py-0 tag-button disabled'>";
         $tag_name = $tag->name;
         if(strlen($tag_name)>10){
             $tag_name = substr($tag_name,0,10) . "...";
@@ -32,7 +32,7 @@ if(has_category()) {
     foreach ( $categories as $cat ) {
         $cat_link = get_category_link( $cat->term_id );
                 
-        $cat_html .= "<p title='{$cat->name}'class='{$cat->slug} btn btn-primary button-sm mx-1 my-1 cat-button disabled'>";
+        $cat_html .= "<p title='{$cat->name}'class='{$cat->slug} btn btn-primary button-sm mx-1 my-1 py-0 cat-button disabled'>";
         $cat_name = $cat->name;
         if(strlen($cat_name)>10){
             $cat_name = substr($cat_name,0,10) . "...";

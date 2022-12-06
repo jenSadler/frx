@@ -51,7 +51,7 @@ $catargs = array(
 <h2>Filter</h2>
 <div class="page-list-hold-filter px-4 py-4">
 <h3 class="cat-title"> Category Filter Settings</h3>
-<ul class="cat-list my-4 mx-0 px-1 py-0">
+<ul class="cat-list d-flex justify-content-between my-4 mx-0 px-1 py-0">
 <li class="my-2">
 <div class="custom-control custom-switch">
 	<div class="form-check form-switch">
@@ -81,9 +81,8 @@ $catargs = array(
 	</div>
 </div>
 		</li>
-		<li class="my-2"><a class="btn btn-sm btn-primary"href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a></li></ul>
-
-<h3 class="cat-title"> By Tag</h3>
+	
+<h3 class="cat-title mt-4"> By Tag</h3>
 <ul class="cat-list tag-list my-4 mx-0 px-1 py-0">
 	<?php
 	if ( $tags ) :

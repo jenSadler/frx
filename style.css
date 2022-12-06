@@ -65,10 +65,12 @@ h1,h2{
 
 body a{
     color:var(--primary-dark);
+    text-decoration:none;
 }
 
 body a:hover{
     color:var(--primary-dark);
+    text-decoration:underline;
 }
 
 body .btn-primary{
@@ -331,4 +333,11 @@ div.holdBreadcrumbs ul li span a {
 
 div.holdBreadcrumbs ul li:hover a{
 	text-decoration:underline;
+}
+
+/*
+*Search
+**/
+body input.search-box{
+    border:1px solid var(--primary-dark);
 }

@@ -38,9 +38,9 @@ add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 
 
 function filter_projects() {
-  echo "HI!";
+ 
 	$catSlug = $_POST['category'];
-	$search =  $_POST['keyword'];
+	$search =  $_POST['s'];
 	$tagSlug =  $_POST['tag'];
 
   

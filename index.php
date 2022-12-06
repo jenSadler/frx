@@ -17,15 +17,16 @@
 
 
 <?php get_header(); ?>
+
 <div id="primary">
 		<main id="main" class="site-main mt-1" role="main">
 			<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-md-5 col-lg-4"> 
+				<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3"> 
 				<?php get_template_part('template-parts/content-sidebar'); ?>
 				
 				</div>
-				<div class="col-sm-12 col-md-7 col-lg-8">
+				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
   				
 				
 				<h1>Resources</h1>
@@ -58,4 +59,4 @@
 
 <?php
 
-get_footer();
+get_footer();?>
