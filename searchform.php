@@ -6,6 +6,6 @@
           <i class="fas fa-search text-muted"></i>
          </span>
     </div>
-   <button class="btn w-100 page-list-search-button my-2 my-sm-2" id="search-button" >Search</button>
+   <!--<button class="btn w-100 page-list-search-button my-2 my-sm-2" id="search-button" >Search</button>-->
   </div>
 </form>

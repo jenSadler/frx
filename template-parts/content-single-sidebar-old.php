@@ -6,7 +6,7 @@
  */
 ?>
 
-<?php
+<?php/*
 
 $catargs = array(
 		'taxonomy' => 'category',
@@ -92,4 +92,4 @@ function end_el(&$output, $item, $depth=0, $args=array()) {
 	$output .= "</li>\n";  
  
 } 
-} ?>
+} */?>

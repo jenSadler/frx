@@ -42,7 +42,7 @@ console.log("inside"+$(this).val());
 ajaxCall();   
 });
 
-$('.page-list-search-button').on('click', function(){
+$('.search-box').on('keyup', function(){
     
     ajaxCall();
 });
