@@ -60,8 +60,8 @@ if(has_category()) {
         <div class="card-body">
                 <a href="<?php the_permalink();?>"><h5 class="card-title"><?php the_title();?></h5></a>
                 <p class="card-text"><?php the_excerpt(); ?></p>
-                <?php get_template_part( 'template-parts/content-tag-pills' ); ?>
-                <?php get_template_part( 'template-parts/content-cat-pills' ); ?>
+                <?php get_template_part( 'template-parts/pills-tag' ); ?>
+                <?php get_template_part( 'template-parts/pills-cat' ); ?>
                 
         </div>
     </div>			

@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3"> 
 				
-				<?php get_template_part('template-parts/content-sidebar'); ?>
+				<?php get_template_part('template-parts/sidebar-content'); ?>
 				
 				</div>
 				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">

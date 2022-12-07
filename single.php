@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-4 col-lg-3"> 
-				<?php get_template_part('template-parts/content-single-sidebar'); ?>
+				<?php get_template_part('template-parts/sidebar-single'); ?>
 				
 				</div>
 				<div class="col-sm-12 col-md-8 col-lg-9">

@@ -46,5 +46,5 @@ setup_postdata($post); ?>
 
 <?php }?>
 </div>  
-wp_reset_postdata(); ?>
+<? wp_reset_postdata(); ?>
 <?php endif;?>

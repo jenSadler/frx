@@ -47,6 +47,14 @@ Text Domain: frx
     content: "";
 }
 
+.hiddenelement {
+    display:none;
+    }
+    
+    .logged-in .hiddenelement {
+    display: block;
+    }
+
 /**
 *All Pages
 *
@@ -96,12 +104,12 @@ body a:hover{
     border-radius: 3px;
   }
 
-body .btn-primary{
+body .btn-primary,button{
     background-color:var(--primary-dark);
     color:white;
     border:1px solid var(--primary-dark);
 }
-body .btn-primary:hover{
+body .btn-primary:hover,button:hover{
     color:var(--primary-dark);
     background-color:white;
     border:1px solid var(--primary-dark);
@@ -112,10 +120,18 @@ body .btn-outline-primary:hover {
     background-color:var(--primary-dark);
     border-color:var(--primary-dark);
   }
-body .btn-outline-primary {
+body .btn-outline-primary{
     color: var(--primary-dark);
-    border-color: var(--primary-dark);
+    border:1px solid var(--primary-dark);
+    background-color:transparent;
   }
+
+  button{
+    padding:15px;
+    border-radius:5px !important;
+  }
+
+
 
 body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-outline-primary,body .btn-outline-primary.active, body .btn-outline-primary.dropdown-toggle.show, body .btn-outline-primary:active {
     color: #fff;
@@ -138,13 +154,16 @@ body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-out
 **/
 
 .home-pre-title{
-    font-size:small;
+    font-size:medium;
     display:block;
 }
 
 .home-box{
     border:1px solid var(--primary-dark);
-    padding:30px;
+    padding:28px 28px;
+}
+.hold-resource-blocks{
+    margin-bottom:0px;
 }
 
 .home-full-column{
@@ -158,6 +177,8 @@ body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-out
 *Header
 *
 **/
+
+
 nav {
     background-color: var(--primary-dark);
     font-family:var(--accent-font);
@@ -216,7 +237,30 @@ footer{
     border-radius:3px;
 }
 
+.browse-block a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
+}
+
+
+.browse-block.inverse div p a{
+    height:100%;
+    padding:30px;
+
+    text-decoration:none;
+    background-color:var(--primary-dark);
+    color:white;
+    border:none;
+    font-weight:bold;
+}
+.browse-block.inverse div p a:hover{
+    background:transparent;
+    color:var(--primary-dark);
+    text-decoration:none;
+    border:none
+}
 
 .browse-block div p{
     margin:0;
@@ -231,7 +275,7 @@ footer{
 .browse-block div p a{
     height:100%;
     padding:30px;
-    display:block;
+
     text-decoration:none;
  
 }
@@ -419,4 +463,9 @@ div.holdBreadcrumbs ul li:hover a{
 **/
 body input.search-box{
     border:1px solid var(--primary-dark);
+    
 }
+
+body .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),body .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+    border-radius:5px;
+  }

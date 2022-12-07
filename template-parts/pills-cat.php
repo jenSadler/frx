@@ -13,7 +13,7 @@ if(has_category()) {
     foreach ( $categories as $cat ) {
         $cat_link = get_category_link( $cat->term_id );
                 
-        $cat_html .= "<p title='{$cat->name}'class='{$cat->slug} btn btn-primary button-sm mx-1 my-1 py-0 cat-button disabled'>";
+        $cat_html .= "<p title='{$cat->name}' alt='{$cat->name}' class='{$cat->slug} btn btn-primary button-sm mx-1 my-1 py-0 cat-button disabled'>";
         $cat_name = $cat->name;
         if(strlen($cat_name)>10){
             $cat_name = substr($cat_name,0,10) . "...";

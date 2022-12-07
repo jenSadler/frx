@@ -31,6 +31,7 @@
 				'post_type' => 'post',
 				'posts_per_page' => -1,
 				'category_name'=>'module'
+				
 			  ]);
 			if($modules->have_posts()):
 				?>
