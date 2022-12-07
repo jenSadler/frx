@@ -20,7 +20,7 @@ $catargs = array(
   );
 
   
-	  $tags = get_tags('post_tag'); //taxonomy=post_tag
+  $tags = get_tags('post_tag'); //taxonomy=post_tag
 	  
 	  
 
@@ -87,9 +87,18 @@ $catargs = array(
 	<?php
 	if ( $tags ) :
 		foreach ( $tags as $tag ) : ?>
-
+			<?php $cur_tag = ""; ?>
+			<?php if(is_tag()):?>
+				<?php $cur_tag = get_queried_object();?>
+			<?php endif;?>
 			<li class="item my-0 mx-0 px-0 py-0">
-			<input type="checkbox" class="btn-check tag-list-item" name="tag-value" id="<?php echo $tag->slug ?>" value="<?php echo $tag->slug ?>" autocomplete="off">
+
+			<?php if($cur_tag != "" && $cur_tag->slug == $tag->slug):?>
+				<input type="checkbox" class="btn-check tag-list-item" name="tag-value" id="<?php echo $tag->slug ?>" value="<?php echo $tag->slug ?>" autocomplete="off" checked>
+			<?php else: ?>
+				<input type="checkbox" class="btn-check tag-list-item" name="tag-value" id="<?php echo $tag->slug ?>" value="<?php echo $tag->slug ?>" autocomplete="off">
+			
+			<?php endif; ?>
 			<label class="btn btn-outline-primary" for="<?php echo $tag->slug ?>"><?php echo $tag->name ?></label>
 			</li>
 			
@@ -116,8 +125,20 @@ function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_
 		$output .= "<h3 class=\"cat-title\">".$item->name."</h3>";
 	}
 	else{
+		$cur_cat = "";
+		if(is_category()){
+			$cur_cat = get_category(get_query_var('cat'),false);
+		}
 		$output .= "<li class=\"item my-2\">";
-		$output .= "<label for=\"".$item->slug ."\"><input type=\"checkbox\" id=\"".$item->slug ."\" name=\"cat-value\" value=\"".$item->slug ."\" class=\"cat-list-item\">";
+
+		if($cur_cat != "" && $cur_cat->slug == $item->slug){
+			$output .= "<label for=\"".$item->slug ."\"><input type=\"checkbox\" id=\"".$item->slug ."\" name=\"cat-value\" value=\"".$item->slug ."\" class=\"cat-list-item\" checked>";
+		}
+		else{
+			$output .= "<label for=\"".$item->slug ."\"><input type=\"checkbox\" id=\"".$item->slug ."\" name=\"cat-value\" value=\"".$item->slug ."\" class=\"cat-list-item\">";
+		
+		}
+		
 		$output .= "<span class=\"cat-checkbox-item\"> ".$item->name."</span></label>";
 	}	$output .= "</li>";
 }  

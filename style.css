@@ -60,7 +60,16 @@ body{
 
 h1,h2{
     font-family:var(--accent-font);
+    
+}
+
+h1{
     color:var(--primary-dark);
+}
+
+body h2{
+    margin-top:40px;
+
 }
 
 body a{
@@ -163,6 +172,26 @@ nav li a{
 
 footer{
     background-color:var(--primary-dark);
+}
+
+/*
+*family browse page
+**/
+
+.browse-block div{
+    border:1px solid var(--primary-dark);
+    padding:20px;
+    align-self: stretch !important;
+    vertical-align:middle;
+    display:flex;
+    justify-content:center;
+}
+
+.browse-block div p{
+    margin:0;
+    align-self:center;
+    
+    
 }
 
 /**

@@ -4,7 +4,7 @@
  * 
  * @package frx
  */
- 
+ /*
 $tag_html="";
 $cat_html="";
 if(has_tag()) {
@@ -13,8 +13,7 @@ $tag_html = '<div class="post_tags">';
 foreach ( $tags as $tag ) {
 	$tag_link = get_tag_link( $tag->term_id );
 			
-	/*$tag_html .= "<p class='{$tag->slug} btn btn-primary button-sm mx-1 my-1 tag-button disabled'>";
-	$tag_html .= "{$tag->name}</p>";*/
+	
 
         $tag_html .= "<p title='{$tag->name}'class='{$tag->slug} btn btn-primary button-sm mx-1 my-1 py-0 tag-button disabled'>";
         $tag_name = $tag->name;
@@ -42,7 +41,7 @@ if(has_category()) {
     $cat_html .= '</div>';
 } 
 
-
+*/
 
 ?>
 <div class="col-sm-12 col-md-6 col-lg-4 post-list-blog-post my-3">
@@ -54,20 +53,16 @@ if(has_category()) {
         if(has_post_thumbnail()){
             the_post_thumbnail('thumbnail', ['class' => 'card-img-top', 'alt' => 'Feature image']); 
         }
-       /* else{
-            $attachmentID = 121;
-        $img= wp_get_attachment_image_src($attachmentID, 'medium');
-        $alt = get_post_meta($attachmentID, '_wp_attachment_image_alt', true);    
-            echo "<img src='".$img[0]."' alt='" .$alt."' class='wp-post-image card-img-top'/>";
-        };*/
+      
         ?>
     </a>
         
         <div class="card-body">
                 <a href="<?php the_permalink();?>"><h5 class="card-title"><?php the_title();?></h5></a>
                 <p class="card-text"><?php the_excerpt(); ?></p>
-                <?php echo $tag_html;?>
-                <?php echo $cat_html;?>
+                <?php get_template_part( 'template-parts/content-tag-pills' ); ?>
+                <?php get_template_part( 'template-parts/content-cat-pills' ); ?>
+                
         </div>
     </div>			
 </div>

@@ -23,9 +23,8 @@
 				<div class="col-sm-12 col-md-8 col-lg-9">
 				<?php while(have_posts()): the_post(); ?>
 			
-					<h1 class="page-title">
-					<?php the_title() ?> </h1>
-					<?php the_content();?>
+				<?php get_template_part( 'template-parts/content-single'); ?>
+					
 				<?php endwhile; ?>
 				</div>
 			</div>

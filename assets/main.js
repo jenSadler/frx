@@ -2,12 +2,53 @@
 
 jQuery(document).ready(function($){
     console.warn(jQuery.fn.jquery);
-
+    
     var searchContents = $('#keyword').val();
+    var anyCatsChecked = false;
+    var anyCatsChecked = checkForCatChecks();
+
+    var anyTagsChecked = false;
+    var anyTagsChecked = checkForTagChecks();
+
     if(typeof searchContents !== "undefined" && searchContents !=""){
         ajaxCall();
     }
     
+    if(anyCatsChecked == true){
+        
+        ajaxCall();
+    }
+
+    if(anyTagsChecked == true){
+        
+        ajaxCall();
+    }
+
+function checkForCatChecks(){
+  
+    var ischecked=false;
+    var checkboxes = $('.cat-list-item');
+    checkboxes.each(function(i, obj) {
+        if ($(this).prop("checked")) {
+     
+            ischecked = true;
+        } 
+    });
+    return ischecked;
+}
+
+function checkForTagChecks(){
+  
+    var ischecked=false;
+    var checkboxes = $('.tag-list-item');
+    checkboxes.each(function(i, obj) {
+        if ($(this).prop("checked")) {
+         
+            ischecked = true;
+        } 
+    });
+    return ischecked;
+}
      
 $('#cat-additive').on('change', function() {
     ajaxCall();
@@ -16,30 +57,21 @@ $('#tag-additive').on('change', function() {
     ajaxCall();
 });
 
-$('.cat-list-item').on('change', function() {
-        if ($(this).prop("checked")) {
-            $(this).addClass('active');
-            
-        }
-        else{
-            $(this).removeClass('active')
-        }
-    console.log("inside"+$(this).val());
-   
+$('.cat-list-item').on('change', function() {   
     ajaxCall();   
 });
 
 $('.tag-list-item').on('change', function() {
-    if ($(this).prop("checked")) {
+    /*if ($(this).prop("checked")) {
         $(this).addClass('active');
         
     }
     else{
         $(this).removeClass('active')
     }
-console.log("inside"+$(this).val());
+console.log("inside"+$(this).val());*/
 
-ajaxCall();   
+    ajaxCall();   
 });
 
 $('.search-box').on('keyup', function(){
@@ -59,7 +91,7 @@ function getCategoryKeywords(){
     
 
     var output = "";
-    $('.cat-list-item.active').each(function(i, obj) {
+    $('.cat-list-item:checkbox:checked').each(function(i, obj) {
         if(i==0){
             output = $(this).val();  
         }
@@ -85,7 +117,7 @@ function getTagKeywords(){
     
 
     var output = "";
-    $('.tag-list-item.active').each(function(i, obj) {
+   $('.tag-list-item:checkbox:checked').each(function(i, obj) {
         if(i==0){
             output = $(this).val();  
         }
@@ -101,6 +133,7 @@ function getTagKeywords(){
 
 
 function ajaxCall(){
+
     var search = $('#keyword').val();
     var category = getCategoryKeywords();
     var tag = getTagKeywords();

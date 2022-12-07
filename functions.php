@@ -138,7 +138,7 @@ $sep  = "";
 
     }
 
-    // Get categories
+   /* // Get categories
     $category = get_the_category( $post->ID );
 
     // If category not empty
@@ -146,19 +146,21 @@ $sep  = "";
 
       // Arrange category parent to child
       $category_values      = array_values( $category );
-      $get_last_category    = end( $category_values );
-      // $get_last_category    = $category[count($category) - 1];
-      $get_parent_category  = rtrim( get_category_parents( $get_last_category->term_id, true, ',' ), ',' );
-      $cat_parent           = explode( ',', $get_parent_category );
+      //$get_last_category    = end( $category_values );
+       $get_last_category    = $category[count($category) - 1];
+      //$get_parent_category  = rtrim( get_category_parents( $get_last_category->term_id, true, ',' ), ',' );
+     // $cat_parent           = explode( ',', $get_parent_category );
 
       // Store category in $display_category
-      $display_category = '';
-      foreach( $cat_parent as $p ) {
-        //$display_category .=  '<li class="item item-cat">'. $p .'</li>' . $sep;
-        $display_category .=  '<li class="item item-cat"><a href="'.get_home_url().'/projects">Projects</a></li>' . $sep;
-      }
+      //$display_category = '';
+      //foreach( $cat_parent as $p ) {
+       // $display_category .=  '<li class="item item-cat">'. $p .'</li>' . $sep;
+        //$display_category .=  '<li class="item item-cat"><a href="'.get_home_url().'/projects">Projects</a></li>' . $sep;
+      //}
+      
+      ////$display_category .=  '<li class="item item-cat"><a href="'.get_home_url().''.$get_last_category->'name'.'</a></li>' . $sep;
 
-    }
+    }*/
 
     // If it's a custom post type within a custom taxonomy
     $taxonomy_exists = taxonomy_exists( $custom_taxonomy );
