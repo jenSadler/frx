@@ -34,20 +34,7 @@ $catargs = array(
 <div class="page-list-hold-filter px-4 py-4">
 <?php get_search_form();?>
 </div>
-<!--
-<h2>Tags</h2>
 
-<div class="page-list-hold-filter px-4 py-4">
-	<ul class="tag-list comma-list">
-	<?php
-	if ( $tags ) :
-		foreach ( $tags as $tag ) : ?>
-			<li class="item"><a class="tag-list_item btn btn-primary button-sm mx-1 my-1 tag-list-button " href="#"  data-slug="<?php echo $tag->slug ?>"><?php echo $tag->name; ?></a></li>
-		<?php endforeach; ?>
-	<?php endif; ?>
-	
-	</ul>
-</div> -->
 <h2>Filter</h2>
 <div class="page-list-hold-filter px-4 py-4">
 <h3 class="cat-title"> Category Filter Settings</h3>
@@ -60,10 +47,7 @@ $catargs = array(
 	</div>
 </div>
 		</li>
-
-
-	<?php $page_for_posts = get_option( 'page_for_posts' );?>
-<li class="my-2"><a class="btn btn-sm btn-primary"href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a></li></ul>
+</ul>
 <?php wp_list_categories($catargs); ?>
 		</div>
 

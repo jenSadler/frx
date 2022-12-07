@@ -29,9 +29,12 @@
 				</div>
 				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
   				
-				
-				<h1 id="main-header">Resources</h1>
-				
+				<div class="hold-header">
+					<h1 id="main-header">Resources</h1>
+					<?php $page_for_posts = get_option( 'page_for_posts' );?>
+					<a class="btn btn-outline-primary"href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a>
+
+				</div>
 			<?php
 			if($projects->have_posts()):
 				?>
