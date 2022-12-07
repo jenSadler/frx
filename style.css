@@ -180,18 +180,38 @@ footer{
 
 .browse-block div{
     border:1px solid var(--primary-dark);
-    padding:20px;
+    padding:0px;
     align-self: stretch !important;
     vertical-align:middle;
     display:flex;
     justify-content:center;
+    border-radius:3px;
+}
+
+.browse-block div:hover{
+    background-color:var(--primary-dark);
 }
 
 .browse-block div p{
     margin:0;
+    padding:0;
     align-self:center;
+    width:100%;
+   
     
-    
+}
+
+.browse-block div p a{
+    height:100%;
+    padding:30px;
+    display:block;
+    text-decoration:none;
+ 
+}
+.browse-block div p a:hover{
+    background:var(--primary-dark);
+    color:white;
+    text-decoration:none;
 }
 
 /**

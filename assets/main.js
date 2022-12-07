@@ -155,5 +155,7 @@ function ajaxCall(){
         $('.project-tiles').html(res);
       }
     });
+
+    $("html, body").animate({ scrollTop: 0 }, "fast");
   }
 });

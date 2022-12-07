@@ -23,16 +23,14 @@
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3"> 
-				<?php if(is_category()):?>
-					CATEGORY<?php get_template_part('template-parts/content-category-sidebar'); ?>
-				<?php else: ?>
+				
 				<?php get_template_part('template-parts/content-sidebar'); ?>
-				<?php endif?>
+				
 				</div>
 				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
   				
 				
-				<h1>Resources</h1>
+				<h1 id="main-header">Resources</h1>
 				
 			<?php
 			if($projects->have_posts()):
