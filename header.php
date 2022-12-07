@@ -36,8 +36,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 		
 	</header>
 	<div class="container">
-	<div class="holdBreadcrumbs my-3">
-	<?php ah_breadcrumb(); ?>
-	</div>
+	
 </div>
 		

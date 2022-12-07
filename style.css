@@ -82,6 +82,13 @@ body a:hover{
     text-decoration:underline;
 }
 
+.wp-block-search__button.wp-element-button {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    border-radius: 3px;
+  }
+
 body .btn-primary{
     background-color:var(--primary-dark);
     color:white;
@@ -163,7 +170,9 @@ nav li a{
 }
 }
 
-
+.current-menu-item{
+    background-color:blue;
+}
 
 /**
 *Footer
@@ -177,6 +186,9 @@ footer{
 /*
 *family browse page
 **/
+
+/*
+*/
 
 .browse-block div{
     border:1px solid var(--primary-dark);
