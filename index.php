@@ -32,7 +32,7 @@
 				<div class="hold-header">
 					<h1 id="main-header">Resources</h1>
 					<?php $page_for_posts = get_option( 'page_for_posts' );?>
-					<a class="btn btn-outline-primary"href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a>
+					<a class="btn btn-outline-primary reset-search" href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a>
 
 				</div>
 			<?php

@@ -245,6 +245,9 @@ footer{
 *blog post listing page
 *
 **/
+.reset-search:hover{
+    text-decoration:none;
+}
 
 .post-title{
     font-weight:bold;
