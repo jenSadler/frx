@@ -10,7 +10,11 @@ $menu_class = \FRX_THEME\Inc\MENUS::get_instance();
 $header_menu_id = $menu_class->get_menu_id('frx-header-menu');
 $header_menus= wp_get_nav_menu_items($header_menu_id);
 global $post;
-$post_id =  $post->ID;
+$post_id ="";
+if(!is_404() && !is_search()){
+$object = get_queried_object();
+$post_id =  $object->ID;
+}
 ?>
 
 
@@ -94,4 +98,7 @@ $post_id =  $post->ID;
 	</div>
 	</div>
 </nav>
+<div class="container mt-3 mb-3">
+<?php get_breadcrumb()?>
+			</div>
 <?php wp_reset_postdata();?>

@@ -7,7 +7,10 @@
 ?>
 
 <?php
+$excluded_category1 = get_term_by('slug', 'special-module' );
+$excluded_cateogry2 = $category = get_term_by( 'slug', 'uncategorized' );
 
+$allExcluded = $excluded_category1 . ",". $excluded_cateogry2;
 $catargs = array(
 		'taxonomy' => 'category',
 		'orderby' => 'term_order',
@@ -16,7 +19,7 @@ $catargs = array(
 		'hierarchical' =>'1',
 		'walker'=> new Walker_Simple_Example,
 		'title_li'           => __( '' ),
-		'exclude'=>'1'
+		'exclude'=> $allExcluded
   );
 
   

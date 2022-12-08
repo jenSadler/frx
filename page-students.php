@@ -13,7 +13,7 @@
 
 <?php get_header(); ?>
 <div id="primary">
-		<main id="main" class="site-main mt-5" role="main">
+		<main id="main" class="site-main mt-3 mb-5" role="main">
 		<?php if(have_posts()): ?>
 			<div class="container">
 				<?php while(have_posts()): the_post(); ?>
@@ -30,7 +30,7 @@
 			 $modules = new WP_Query([
 				'post_type' => 'post',
 				'posts_per_page' => -1,
-				'category_name'=>'module'
+				'category_name'=>'special-module'
 				
 			  ]);
 			if($modules->have_posts()):

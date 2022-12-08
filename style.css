@@ -318,17 +318,35 @@ a.post-list-selected-tag{
 
 }
 
-.btn.disabled.tag-button{
+.btn.tag-button,.btn.tag-button.disabled{
     border-radius:25px;
     background-color:transparent;
     border:1px solid var(--primary-dark);
     color:var(--primary-dark);
+    text-decoration:none;
 }
-.btn.disabled.cat-button{
+
+.btn.tag-button:hover{
     border-radius:25px;
     background-color:var(--primary-dark);
     border:1px solid var(--primary-dark);
     color:white;
+    text-decoration:none;
+}
+.btn.cat-button,.btn.cat-button.disabled{
+    border-radius:25px;
+    background-color:var(--primary-dark);
+    border:1px solid var(--primary-dark);
+    color:white;
+    text-decoration:none;
+}
+
+.btn.cat-button:hover{
+    border-radius:25px;
+    background-color:transparent;
+    border:1px solid var(--primary-dark);
+    color:var(--primary-dark);
+    text-decoration:none;
 }
 
 h3.cat-title{

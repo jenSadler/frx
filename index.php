@@ -13,13 +13,17 @@
     'order_by' => 'date',
     'order' => 'desc',
   ]);
-?>
+
+  ?>
+
+
+
 
 
 <?php get_header(); ?>
 
 <div id="primary">
-		<main id="main" class="site-main mt-5" role="main">
+		<main id="main" class="site-main mt-3" role="main">
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3"> 
@@ -30,10 +34,22 @@
 				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
   				
 				<div class="hold-header">
-					<h1 id="main-header">Resources</h1>
+				<h1 id="main-header">Resources for Families</h1>
 					<?php $page_for_posts = get_option( 'page_for_posts' );?>
+					
+					
 					<a class="btn btn-outline-primary reset-search" href="<?php echo esc_attr( esc_url( get_page_link( $page_for_posts ) ) ) ?>">Reset Search</a>
 
+				</div>
+				<div class="single-page-content">
+				<?php
+					// Display the content of the static posts Page.
+					// This is just an example using setup_postdata().
+					$post = get_queried_object();
+					setup_postdata( $post );
+					the_content();
+					wp_reset_postdata();
+					?>
 				</div>
 			<?php
 			if($projects->have_posts()):
