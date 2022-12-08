@@ -22,7 +22,7 @@ Text Domain: frx
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 :root {
     --primary-dark: #4F2683;
-    --light-bg: #FAFAFA;
+    --light-bg: #F4F4F4;;
     --accent-font: 'Quicksand', sans-serif;;
     --main-font:'Lato', sans-serif;;
   }
@@ -362,6 +362,7 @@ h3.cat-title{
 
 .page-list-hold-filter{
     background-color: var(--light-bg);
+    border-radius: 10px;
 }
 
 button.btn.page-list-search-button{

@@ -7,10 +7,16 @@
 ?>
 
 <?php
-$excluded_category1 = get_term_by('slug', 'special-module' );
-$excluded_cateogry2 = $category = get_term_by( 'slug', 'uncategorized' );
 
-$allExcluded = $excluded_category1 . ",". $excluded_cateogry2;
+$slug1 = 'special-module';
+$cat1 = get_category_by_slug($slug1); 
+$excluded_category1 = $cat1->term_id;
+
+$slug2 = 'uncategorized';
+$cat2 = get_category_by_slug($slug2); 
+$excluded_category2 = $cat2->term_id;
+
+$allExcluded = $excluded_category1 . ",". $excluded_category2;
 $catargs = array(
 		'taxonomy' => 'category',
 		'orderby' => 'term_order',
