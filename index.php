@@ -23,7 +23,7 @@
 <?php get_header(); ?>
 
 <div id="primary">
-		<main id="main" class="site-main mt-3" role="main">
+		<main id="main" class="site-main " role="main">
 			<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-5 col-lg-4 col-xl-3"> 
@@ -34,7 +34,7 @@
 				<div class="col-sm-12 col-md-7 col-lg-8 col-xl-9">
   				
 				<div class="hold-header">
-				<h1 id="main-header">Resources for Families</h1>
+				<h1 id="main-header" class="mt-3">Resources for Families</h1>
 					<?php $page_for_posts = get_option( 'page_for_posts' );?>
 					
 					

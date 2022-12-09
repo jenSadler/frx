@@ -104,15 +104,27 @@ body a:hover{
     border-radius: 3px;
   }
 
-body .btn-primary,button{
+body .btn-primary,.elearning-freak-module button,.grassblade_launch_link{
     background-color:var(--primary-dark);
     color:white;
     border:1px solid var(--primary-dark);
 }
-body .btn-primary:hover,button:hover{
+body .btn-primary:hover, .elearning-freak-module button:hover,.grassblade_launch_link:hover{
     color:var(--primary-dark);
     background-color:white;
     border:1px solid var(--primary-dark);
+}
+
+.elearning-freak-module button,.grassblade_launch_link{
+    padding:15px 30px;
+    border-radius:5px;
+}
+
+.grassblade-module div{
+    display:block;
+    position:relative;
+    padding:30px 0;
+
 }
 
 body .btn-outline-primary:hover {
@@ -289,6 +301,15 @@ footer{
 *blog post listing page
 *
 **/
+
+.hold-filter-title{
+    display:flex;
+    align-items: baseline;
+}
+
+.hold-filter-title h2{
+    flex-grow:1;
+}
 .reset-search:hover{
     text-decoration:none;
 }
@@ -355,7 +376,7 @@ h3.cat-title{
     font-weight:bold;
     width:100%;
     display:block;
-    border-bottom:2px solid black;
+    
     color:black;
 
 }

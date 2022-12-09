@@ -5,11 +5,7 @@
  * @package frx
  * */
 
-?>
-
-<?php
-
-if(!defined('FRX_DIR_PATH')){
+ if(!defined('FRX_DIR_PATH')){
 	define('FRX_DIR_PATH', untrailingslashit(get_template_directory()));
 }
 
@@ -42,3 +38,4 @@ function get_breadcrumb() {
   get_template_part('template-parts/breadcrumbs');
 
 }
+?>

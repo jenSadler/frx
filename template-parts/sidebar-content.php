@@ -39,43 +39,54 @@ $catargs = array(
 <!-- Default checked -->
 
 
-<h2>Search</h2>
+<div class="hold-filter-title">
+	<h2>Search</h2>
+</div>
 <div class="page-list-hold-filter px-4 py-4">
 <?php get_search_form();?>
 </div>
 
-<h2>Filter</h2>
-<div class="page-list-hold-filter px-4 py-4">
-<h3 class="cat-title"> Category Filter Settings</h3>
-<ul class="cat-list d-flex justify-content-between my-4 mx-0 px-1 py-0">
-<li class="my-2">
-<div class="custom-control custom-switch">
+<div class="hold-filter-title">
+	<h2>Filter</h2>
+
+	<div class="custom-control custom-switch">
 	<div class="form-check form-switch">
 		<input type="checkbox" class="form-check-input" id="cat-additive" checked>
 		<label class="form-check-label" for="cat-additive">Addtive</label>
 	</div>
 </div>
+
+</div>
+
+
+<div class="page-list-hold-filter px-4 py-4">
+<!--<h3 class="cat-title"> Category Filter Settings</h3>
+<ul class="cat-list d-flex justify-content-between my-4 mx-0 px-1 py-0">
+<li class="my-2">
+
 		</li>
-</ul>
+</ul>-->
 <?php wp_list_categories($catargs); ?>
 		</div>
 
-<h2>Tags</h2>
-<div class="page-list-hold-filter px-4 py-4">
+<div class="hold-filter-title">
+	<h2>Tags</h2>
 
-<h3 class="cat-title"> Tag Filter Settings</h3>
-
-<ul class="cat-list my-4 mx-0 px-1 py-0">
-<li class="my-2">
-<div class="custom-control custom-switch">
+	<div class="custom-control custom-switch">
 	<div class="form-check form-switch">
 		<input type="checkbox" class="form-check-input" id="tag-additive" checked>
 		<label class="form-check-label" for="tag-additive">Addtive</label>
 	</div>
 </div>
-		</li>
+</div>
+<div class="page-list-hold-filter px-4 py-4">
+<!--
+<h3 class="cat-title"> Tag Filter Settings</h3>
+
+<ul class="cat-list my-4 mx-0 px-1 py-0">
+</ul>-->
 	
-<h3 class="cat-title mt-4"> By Tag</h3>
+<h3 class="cat-title"> By Tag</h3>
 <ul class="cat-list tag-list my-4 mx-0 px-1 py-0">
 	<?php
 	if ( $tags ) :

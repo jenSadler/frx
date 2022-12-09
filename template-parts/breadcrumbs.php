@@ -106,6 +106,15 @@
 		
 		 echo '<li class="item-current item"><span><a href="#" class="disabled">'. single_post_title('', FALSE) .'</a></span></li>';
 	}
+  else if(is_category()){
+    echo '<li class="item item-cat"><a href="' . get_permalink( get_option( 'page_for_posts' ) ) . '">'.get_the_title(get_option( 'page_for_posts' )).'</a></li>'.$sep;
+    echo '<li class="item-current item"><span><a href="#mainTitle">'. get_the_title() .'</a></span></li>';
+  
+  }
+  else{
+    echo '<li class="item-current item"><span><a href="#mainTitle">'. get_the_title() .'</a></span></li>';
+  
+  }
 
 	echo "</ul></nav></div>";
 	?>

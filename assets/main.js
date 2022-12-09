@@ -156,6 +156,9 @@ function ajaxCall(){
       }
     });
 
-    $("html, body").animate({ scrollTop: 0 }, "fast");
+   //$("html, body").animate({ scrollTop: $("#main-header").offset.top }, "2000");
+    $('html, body').animate({
+        scrollTop: $("#main-header").offset().top -40
+    }, 500);
   }
 });
