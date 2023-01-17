@@ -29,7 +29,12 @@ frx_get_theme_instance();
 
 add_action('wp_ajax_filter_projects', 'filter_projects');
 add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
+add_filter( 'frx_saved_item_html', 'change_frx_saved_item_html');
 
+function change_frx_saved_item_html( $inner_html_to_return ) {
+	return $inner_html_to_return;
+	
+}
 function filter_projects() {
   get_template_part('template-parts/ajax'); } 
 

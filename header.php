@@ -32,7 +32,15 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <div id="page" class="site d-flex flex-column min-vh-100">
 	<header id="masthead" class="site-header" role="banner">
-		<?php get_template_part( 'template-parts/header/nav' ); ?>
+		
+		<?php if( is_front_page() ){
+			echo '<div class="hompage-top-header"></div>';
+		}
+		else{
+		
+  			get_template_part( 'template-parts/header/nav' );	
+		}?>
+
 		
 	</header>
 	<div class="container">

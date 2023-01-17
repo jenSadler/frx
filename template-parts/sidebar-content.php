@@ -52,7 +52,7 @@ $catargs = array(
 	<div class="custom-control custom-switch">
 	<div class="form-check form-switch">
 		<input type="checkbox" class="form-check-input" id="cat-additive" checked>
-		<label class="form-check-label" for="cat-additive">Addtive</label>
+		<label class="form-check-label" for="cat-additive">Additive</label>
 	</div>
 </div>
 
@@ -75,7 +75,7 @@ $catargs = array(
 	<div class="custom-control custom-switch">
 	<div class="form-check form-switch">
 		<input type="checkbox" class="form-check-input" id="tag-additive" checked>
-		<label class="form-check-label" for="tag-additive">Addtive</label>
+		<label class="form-check-label" for="tag-additive">Additive</label>
 	</div>
 </div>
 </div>

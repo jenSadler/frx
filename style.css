@@ -165,6 +165,12 @@ body .btn-check:active + .btn-outline-primary,body .btn-check:checked + .btn-out
 *
 **/
 
+.hompage-top-header {
+    min-height: 20px;
+    background-color: var(--primary-dark);
+    display:block;
+  }
+  
 .home-pre-title{
     font-size:medium;
     display:block;
@@ -509,3 +515,31 @@ body input.search-box{
 body .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3),body .input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
     border-radius:5px;
   }
+
+/**
+*Single
+*
+*/
+.wp-block-file a{
+    display:inline-block;
+}
+.wp-block-file a:first-child {
+    display:block;
+}
+    .wp-block-file__button.wp-element-button {
+    background-color: var(--primary-dark);
+    border: 2px solid var(--primary-dark);
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin:0px;
+    }
+
+    .wp-block-file__button.wp-element-button:hover {
+        background-color:white;
+        color: var(--primary-dark)
+        text-decoration:none
+    }

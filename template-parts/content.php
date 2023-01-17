@@ -62,7 +62,7 @@ if(has_category()) {
                 <p class="card-text"><?php the_excerpt(); ?></p>
                 <?php get_template_part( 'template-parts/pills-tag' ); ?>
                 <?php get_template_part( 'template-parts/pills-cat' ); ?>
-                
+                <?php // echo do_shortcode('[append_save_button]');?>
         </div>
     </div>			
 </div>
