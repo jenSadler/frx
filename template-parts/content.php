@@ -58,10 +58,12 @@ if(has_category()) {
     </a>
         
         <div class="card-body">
-                <a href="<?php the_permalink();?>"><h5 class="card-title"><?php the_title();?></h5></a>
+                <a href="<?php the_permalink();?>"><h2 class="card-title"><?php the_title();?></h2></a>
                 <p class="card-text"><?php the_excerpt(); ?></p>
+				<h3 class="card-info-title">Tags:</h3>
                 <?php get_template_part( 'template-parts/pills-tag' ); ?>
-                <?php get_template_part( 'template-parts/pills-cat' ); ?>
+                <h4 class="card-info-title">Categories:</h4>
+				<?php get_template_part( 'template-parts/pills-cat' ); ?>
                 <?php // echo do_shortcode('[append_save_button]');?>
         </div>
     </div>			

@@ -85,11 +85,7 @@ $post_id =  $object->ID;
 					}
 				}
 			?>
-			<li class="nav-item ">
-							<a class="nav-link" href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" alt="<?php esc_attr_e( 'Sign In', 'frx' ); ?>">
-						<?php _e( 'Sign In', 'frx' ); ?>
-						</a>
-						</li>
+			
 			</ul>
 	
 		<?php } ?>	

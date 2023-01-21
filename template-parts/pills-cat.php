@@ -19,7 +19,7 @@ if(has_category()) {
         
         $cat_link = get_category_link( $cat->term_id );
                 
-        $cat_html .= "<a title='{$cat->name}' alt='{$cat->name}' class='{$cat->slug} {$disabled} btn btn-primary button-sm mx-1 my-1 py-0 cat-button' href='{$cat_link}'>";
+        $cat_html .= "<a title='{$cat->name}' alt='{$cat->name}' class='{$cat->slug} btn btn-primary button-sm mx-1 my-1 py-0 cat-button' href='{$cat_link}'>";
         $cat_name = $cat->name;
         if(strlen($cat_name)>10 && $isSingle == false){
             $cat_name = substr($cat_name,0,10) . "...";
