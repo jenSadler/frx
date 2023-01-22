@@ -12,7 +12,7 @@
 
 <?php the_content();?>
 
-<div class="mt-5 mb-5">
+<div class="cat-tags">
     <h2>Tags</h2>
 <?php get_template_part( 'template-parts/pills-tag' ); ?>
  <h2>Categories</h2>

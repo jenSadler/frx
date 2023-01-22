@@ -25,8 +25,8 @@ if ( post_password_required() ) {
 			<?php
 			printf(
 				_nx(
-					'One thought on "%2$s"',
-					'%1$s thoughts on "%2$s"',
+					'One comment on "%2$s"',
+					'%1$s comments on "%2$s"',
 					get_comments_number(),
 					'comments title',
 					'frx'

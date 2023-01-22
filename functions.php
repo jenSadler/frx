@@ -31,7 +31,8 @@ add_action('wp_ajax_filter_projects', 'filter_projects');
 add_action('wp_ajax_nopriv_filter_projects', 'filter_projects');
 add_filter( 'frx_saved_item_html', 'change_frx_saved_item_html');
 add_filter('comment_form_default_fields', 'website_remove');
-add_filter( 'comment_form_default_fields', 'wc_comment_form_change_cookies' );
+add_filter( 'comment_form_default_fields', 'wc_comment_form_change_cookies' );	
+add_action('after_setup_theme', 'remove_admin_bar');
 
 
 function change_frx_saved_item_html( $inner_html_to_return ) {
@@ -61,6 +62,12 @@ function wc_comment_form_change_cookies( $fields ) {
 	$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
 					 '<label for="wp-comment-cookies-consent">'.__(' Save my name and email in this browser for the next time I comment.', 'textdomain').'</label></p>';
 	return $fields;
+}
+
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
 }
 
 

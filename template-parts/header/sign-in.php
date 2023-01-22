@@ -1,44 +1,19 @@
-<?php 
+<?php $menu_class = \FRX_THEME\Inc\MENUS::get_instance();
+$signin_menu_id = $menu_class->get_menu_id('frx-signin-menu');
+$signin_menus= wp_get_nav_menu_items($signin_menu_id);
 
-/** 
- * Navigation Template Part
- * @package frx
- * 
- * 
- * */
-$menu_class = \FRX_THEME\Inc\MENUS::get_instance();
-$header_menu_id = $menu_class->get_menu_id('frx-header-menu');
-$header_menus= wp_get_nav_menu_items($header_menu_id);
-global $post;
-$post_id ="";
-if(!is_404() && !is_search()){
-$object = get_queried_object();
-$post_id =  $object->ID;
-}
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-<div class="container">	
-	
-	<a class="navbar-brand" href="<?php echo get_home_url(); ?>">
-		
-		<?php
-			$site_title = get_bloginfo( 'name' );
-			echo $site_title;
-		?>
-		
-	</a>
-	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<?php
-		
-		if(!empty($header_menus) && is_array($header_menus)){ ?>
-			<ul class="navbar-nav nav-fill mx-auto w-100">
+<div class="hold-signin">
+
+
+	<div class="container ">	
+    <?php get_breadcrumb()?>
+	<?php if(!empty($signin_menus) && is_array($signin_menus)){ ?>
+			<ul class="signin-topbar">
 			<?php
-				foreach($header_menus as $menu_item){
+				foreach($signin_menus as $menu_item){
 					$addCurrentClass="";
 					$menuPageID = get_post_meta( $menu_item ->ID, '_menu_item_object_id', true );
 					if($menuPageID ==$post_id){
@@ -88,12 +63,5 @@ $post_id =  $object->ID;
 			</ul>
 	
 		<?php } ?>	
-		
-		
 	</div>
-	</div>
-</nav>
-<!--<div class="container mt-3 mb-3">
-
-			</div> -->
-<?php wp_reset_postdata();?>
+</div>

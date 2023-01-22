@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 <div id="primary">
-	<main id="main" class="site-main mt-3 mb-5" role="main">
+	<main id="main" class="site-main" role="main">
 	<?php if(have_posts()): ?>
 		<div class="container">
 		

@@ -30,7 +30,8 @@
         register_nav_menus(
             [
                 'frx-header-menu'=> __('Header Menu','frx'),
-                'frx-footer-menu'=> __('Extra Menu','frx')
+                'frx-footer-menu'=> __('Extra Menu','frx'),
+                'frx-signin-menu'=> __('Sign In Menu','frx')
             ]
         );
     }

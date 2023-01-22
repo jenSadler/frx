@@ -32,6 +32,8 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 <div id="page" class="site d-flex flex-column min-vh-100">
 	<header id="masthead" class="site-header" role="banner">
+
+	
 		
 		<?php if( is_front_page() ){
 			echo '<div class="hompage-top-header"></div>';
@@ -43,7 +45,6 @@ if ( function_exists( 'wp_body_open' ) ) {
 
 		
 	</header>
-	<div class="container">
+	<?php get_template_part( 'template-parts/header/sign-in' );?>
+
 	
-</div>
-		

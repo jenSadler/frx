@@ -9,7 +9,7 @@
 
 <?php get_header(); ?>
 <div id="primary">
-	<main id="main" class="site-main mt-5" role="main">
+	<main id="main" class="site-main" role="main">
 	<div class="container">
 	<h1>You're off the map (error 404)</h1>
 
