@@ -81,6 +81,7 @@ h1{
 
 body h2{
     margin-top:40px;
+    font-size:x-large;
 
 }
 
@@ -372,7 +373,7 @@ footer{
 
 .hold-filter-title h2{
     flex-grow:1;
-    font-size:large;
+    
 }
 .reset-search:hover{
     text-decoration:none;
